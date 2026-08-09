@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+.page {
+	position: relative;
+	width: 100%;
+	height: 100dvh;
+	overflow: hidden;
+	background: #14110e;
+}
+
+.background {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+.mid {
+	position: absolute;
+	z-index: 10;
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.login {
+	padding: 12px 20px;
+	cursor: pointer;
+	color: #14110e;
+
+	@apply rounded-4xl border-2;
+
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease,
+		transform 0.2s ease;
+
+	background: #f3f2f1;
+}
+
+.login:hover {
+	background: #14110e;
+	color: #f3f2f1;
+	transform: translate(0%, 0%) scale(1.05);
+}
+
+.outlined-text {
+	color: #f3f2f1;
+	-webkit-text-stroke: 2px #14110e;
+}
